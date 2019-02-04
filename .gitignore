@@ -1,0 +1,10 @@
+# Created by .ignore support plugin (hsz.mobi)
+.DS_Store
+.idea/
+/php_oo/
+/php_oo/createNewUser.php
+/php_oo/dbConnection.php
+/php_oo/dbCredentials.php
+/php_oo/User.php
+/php_oo/validation.php
+/php_oo/success.php

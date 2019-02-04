@@ -1,0 +1,5 @@
+/* Adds red border to form field if the input is invalid */
+
+:invalid {
+  border: 2px solid red;
+}
