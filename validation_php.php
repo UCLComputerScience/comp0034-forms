@@ -14,7 +14,7 @@
         <?php
         include('php/validation.php');
         $errors = [];
-        echo displayErrors($errors);
+        //displayErrors($errors);
         ?>
     </div>
     <form name="user" action="php/createNewUser.php" method="post"">
@@ -26,7 +26,7 @@
             <label for="lastname" class="control-label">Last name</label>
             <input type="text" id="lastname" name="lastname" minlength="3" required>
             <label for="email" class="control-label">Email</label>
-            <input type="email" name="email" id="email">
+            <input type="text" name="email" id="email">
             <label for="password" class="control-label">Password</label>
             <input type="password" id="password" name="password">
             <input type="submit" name="submit" value="Submit">
@@ -39,15 +39,13 @@
             <ul>
                 <li>Prepares data to avoid common problems with format</li>
                 <li>Checks that the email is a valid address format</li>
-                <li>Checks that all fields are complete</li>
                 <li>Error messages displayed at top of form</li>
             </ul>
         </div>
         <div class="col">
             <p>HTML validation applied:</p>
             <ul>
-                <li>First name and last name are required</li>
-                <li>Email requires email address format</li>
+                <li>First and last name are required</li>
                 <li>First name must begin with a capital letter followed by lowercase letters</li>
                 <li>Last name length is between 3 and 10</li>
                 <li>First name and last name must start with a capital letter followed by lowercase letters</li>

@@ -29,4 +29,5 @@ function displayErrors($errors = array())
         }
         $output .= "</ul>";
     }
+    echo $output;
 }

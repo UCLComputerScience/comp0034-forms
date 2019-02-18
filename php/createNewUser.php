@@ -12,19 +12,14 @@ foreach ($_POST as $key => $value) {
 }
 
 //Reformat the string data
-//$firstname = checkInput($_POST['firstname']);
-//$lastname = checkInput($_POST['lastname']);
-//$email = checkInput($_POST['email']);
-
-$firstname = $_POST['firstname'];
-$lastname = $_POST['lastname'];
-$email = $_POST['email'];
+$firstname = checkInput($_POST['firstname']);
+$lastname = checkInput($_POST['lastname']);
+$email = checkInput($_POST['email']);
 
 //Check that the email format is valid
-/*
 if (!isValidEmail($email)) {
     $errors[] = "Invalid email format";
-}*/
+}
 
 //Hash the password
 $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -43,7 +38,8 @@ if (mysqli_num_rows($result) == 1) {
 //If there are errors return to form otherwise try to create the user
 if (count($errors) > 0) {
     closeDb($connection);
-    header("Location: ../validation_php.php");
+    displayErrors($errors);
+    //header("Location: ../validation_php.php");
     exit;
 } else {
     $qryAdd = "INSERT INTO user (firstname, lastname, email, password) VALUES (";
