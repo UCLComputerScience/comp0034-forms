@@ -34,7 +34,7 @@
     </form>
     <hr>
     <div class="row">
-        <div class="col-md">
+        <div class="col">
             <p>PHP validation applied:</p>
             <ul>
                 <li>Prepares data to avoid common problems with format</li>
@@ -43,8 +43,7 @@
                 <li>Error messages displayed at top of form</li>
             </ul>
         </div>
-        </div>
-        <div class="col-md">
+        <div class="col">
             <p>HTML validation applied:</p>
             <ul>
                 <li>First name and last name are required</li>

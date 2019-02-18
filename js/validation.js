@@ -16,8 +16,23 @@ function validateForm() {
         return false;  ////Returns to the form with the values as entered and error displayed next to the email
     } //if all is OK the form will be submitted and all values cleared
 
-    /* To use this first add novalidate as an attribute in the form tag
-    //check if the firstname is valid
+
+    let password = document.querySelector("#password").value;
+    //let password = document.forms["myForm"]["password"].value;  //Should return the same value as the line above
+    let patt = new RegExp("[0-9]+");
+    let res = patt.test(password);
+    if (!res){
+        alert("Only numbers are allowed in passwords");
+        return false; //This prevents the form from submitting once the JavaScript is complete
+    }
+
+
+}
+
+function validateFirstName(){
+
+    // To use this first add novalidate as an attribute in the form tag, this prevents the HTML validation occuring
+
     let firstname = document.querySelector("#firstname");
     if (!firstname.checkValidity()) {
         firstname.setCustomValidity("First letter must be capitalised and all subsequent letters lowercase");
@@ -27,13 +42,5 @@ function validateForm() {
         document.querySelector("#firstnameError").innerHTML = "";
         return false;
     }
-    */
 
-    let password = document.querySelector("#password").value;
-    let patt = new RegExp("[0-9]+");
-    let res = patt.test(password);
-    if (!res){
-        alert("Only numbers are allowed in passwords");
-        return false;
-    }
 }
